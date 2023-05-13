@@ -26,3 +26,20 @@ print(datos)
 with open('archivo.csv','a') as actualizar_archivo:
     actualizo_csv = csv.writer(actualizar_archivo)
     actualizo_csv.writerows(datos)
+
+
+
+indice_fila_a_eliminar = None
+for i, fila in enumerate(datos):
+    if fila[0] == "Juan":
+        indice_fila_a_eliminar = i
+        break
+
+if indice_fila_a_eliminar is not None:
+    datos.pop(indice_fila_a_eliminar)
+
+with open("archivo.csv", "w", newline='') as archivo_csv:
+    escritor_csv = csv.writer(archivo_csv)
+    escritor_csv.writerows(datos)
+
+print(datos)

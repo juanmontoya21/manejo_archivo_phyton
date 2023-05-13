@@ -19,10 +19,10 @@ with zipfile.ZipFile("archivo.zip","w") as archivo_zip:
   archivo_zip.write("archivo2.txt")
 
 
-with tarfile.open("archivo.tar","w") as archivo_tar:
-  archivo_tar.add("archivo1.txt")
-  archivo_tar.add("archivo2.txt")
-  archivo_tar.add("archivo3.txt")
+# with tarfile.open("archivo.tar","w") as archivo_tar:
+#   archivo_tar.add("archivo1.txt")
+#   archivo_tar.add("archivo2.txt")
+#   archivo_tar.add("archivo3.txt")
 
-with tarfile.open("archivo.tar","r") as archivo_tar:
-  archivo_tar.extractall()
+# with tarfile.open("archivo.tar","r") as archivo_tar:
+#   archivo_tar.extractall()
